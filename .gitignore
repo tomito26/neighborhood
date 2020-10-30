@@ -1,0 +1,6 @@
+neighbor/
+*.pyc
+
+
+.env
+.vscode
