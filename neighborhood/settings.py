@@ -71,7 +71,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
-    'bootstrap4'
+    'bootstrap4',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -156,5 +157,7 @@ cloudinary.config(
     api_key = config('API_KEY'),
     api_secret = config('API_SECRET')
 )
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 django_heroku.settings(locals())
