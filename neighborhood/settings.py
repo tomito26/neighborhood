@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 from typing import cast
 import django_heroku 
@@ -70,6 +71,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
+    'bootstrap4'
 ]
 
 MIDDLEWARE = [
@@ -145,10 +147,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,"static"),
+]
 
 cloudinary.config(
     cloud_name = config('CLOUD_NAME'),
     api_key = config('API_KEY'),
     api_secret = config('API_SECRET')
 )
+
 django_heroku.settings(locals())
