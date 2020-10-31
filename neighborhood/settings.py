@@ -74,6 +74,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'crispy_forms',
     'estate.apps.EstateConfig',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
