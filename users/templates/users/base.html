@@ -13,13 +13,22 @@
     {% endblock %}
 </head>
 <body>
-    {% if messages %}
-        {% for message in messages %}
-            <div class="alert alert-{{message.tags}}">
-                {{message}}
+    {% include 'navbar.html' %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{message.tags}}">
+                            {{message}}
+                        </div>
+                    {% endfor %}
+                {% endif %}
             </div>
-        {% endfor %}
-    {% endif %}
+            <div class="col-md-4"></div>
+        </div>
+    </div>
     {% block content %}
 
     {% endblock %}
