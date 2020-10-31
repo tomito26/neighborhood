@@ -1,5 +1,25 @@
 {% extends 'users/base.html' %}
 
+
 {% block content %}
-{{user.username}}
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="content-section">
+                <div class="media">
+                    <img class="rounded-circle img-fluid" src="{{user.profile.image.url}}" alt="Image"
+                        style="height: 150px;width:150px">
+                    <div class="media-body pl-5 mt-3">
+                        <h2>{{user.username}}</h2>
+                        <p>{{user.email}}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
 {% endblock %}
