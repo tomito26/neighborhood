@@ -73,6 +73,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'bootstrap4',
     'crispy_forms',
+    'estate.apps.EstateConfig',
 ]
 
 MIDDLEWARE = [
