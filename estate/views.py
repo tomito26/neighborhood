@@ -15,5 +15,9 @@ class BusinessDetailView(DetailView):
     
 class BusinessCreateView(CreateView):
     model = Business
-    
     fields = ['business_name','email','business_image']
+    
+    def form_valid(self, form):
+        form.instance.business_owner = self.request.user
+        return super().form_valid(form)
+    

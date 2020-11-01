@@ -12,14 +12,14 @@
   <div class="container pb-5 mb-5">
     <div class="about text-center pt-5 mt-5">
       <h2>About Hood</h2>
-      <p>Hood is a group of neighborhood united with the values of being your neighbor's keeper and always keep them updated on any upcommings within the neighborhood.In hood we also keep you updated on businesses around you,we also make the helplines such as ambulance,firefighters,police within your reach.We value your feedback on any upcomings or state of service offered by businesses around your neighborhood</p>
+      <p>Hood is a group of neighborhood united with the values of being your brother's keeper and always keep them updated on any upcommings within the neighborhood.In hood we also keep you updated on businesses around you,we also make the helplines such as ambulance,firefighters,police within your reach.We value your feedback on any upcomings or state of service offered by businesses around your neighborhood</p>
     </div>
     <h2 class="text-center pt-5 mb-5">Businesses within the hood</h2>
     <div class="row">
       {% for business in businesses  %}
           <div class="col-md-4 p-3">
             <div class="card">
-              <img src="{{business.business_image.url}}" alt="" class="img-fluid card-img-top">
+              <img src="{{business.business_image.url}}" alt="" class="img-fluid">
               <div class="card-body">
                 <a href="{% url 'business-detail' business.pk %}"><p class="card-text">{{business.business_name}}</p></a>
               </div>
