@@ -5,12 +5,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    {% if title  %}
+        <title>{{title}}</title>
+    {% else  %}
+        <title>Hood</title>
+    {% endif %}
+
     {% block styles %}
         {% bootstrap_css %}
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/baseestate.css' %}">
     {% endblock %}
+    
 </head>
 <body>
     {% include 'navbar.html' %}
