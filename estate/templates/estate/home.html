@@ -19,9 +19,9 @@
       {% for business in businesses  %}
           <div class="col-md-4 p-3">
             <div class="card">
-              <img src="{{business.business_image.url}}" alt="" class="img-fluid">
+              <img src="{{business.business_image.url}}" alt="" class="img-fluid card-img-top">
               <div class="card-body">
-                <p class="card-text">{{business.business_name}}</p>
+                <a href="{% url 'business-detail' business.pk %}"><p class="card-text">{{business.business_name}}</p></a>
               </div>
             </div>
           </div>
