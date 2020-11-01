@@ -3,11 +3,12 @@ from .models import Business
 
 # Create your views here.
 def home(request):
-    business = Business.objects.all()
+    businesses = Business.objects.all()
     title = 'Hood - Welcome to hood get the latest updates in your neighborhood '
     
     context = {
-        'title':title
+        'title':title,
+        'businesses':businesses
     }
-    return render(request,'estate/home.html')
+    return render(request,'estate/home.html',context)
     
