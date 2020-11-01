@@ -6,6 +6,7 @@ class Business(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE, null=True)
     email = models.EmailField()
     business_image = CloudinaryField(null=True)
+  
     
     
     def __str__(self):

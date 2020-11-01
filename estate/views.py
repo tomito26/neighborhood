@@ -1,14 +1,11 @@
 from django.shortcuts import render
 from .models import Business
+from django.views.generic  import ListView
 
 # Create your views here.
-def home(request):
-    businesses = Business.objects.all()
-    title = 'Hood - Welcome to hood get the latest updates in your neighborhood '
-    
-    context = {
-        'title':title,
-        'businesses':businesses
-    }
-    return render(request,'estate/home.html',context)
+
+class BusinessListView(ListView):
+    model = Business
+    template_name= 'estate/home.html'
+    context_object_name = 'businesses'
     
