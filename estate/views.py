@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Business
+from .models import Business, Post
 from django.views.generic  import ListView,DetailView,CreateView,UpdateView,DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
 # Create your views here.
@@ -49,3 +49,10 @@ class BusinessDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
         if self.request.user == business.business_owner:
             return True
         return False
+
+
+
+class PostListView(CreateView):
+    model = Post
+    template_name = 'estate/post_list.html'
+    
