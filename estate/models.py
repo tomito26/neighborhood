@@ -31,3 +31,6 @@ class Post(models.Model):
     post = models.TextField(null=True)
     date_posted =models.DateTimeField(auto_now=True)
     neighborhood = models.ForeignKey(Neighborhood,on_delete=models.CASCADE,null=True,blank=True)
+    
+    
+  

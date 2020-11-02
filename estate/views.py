@@ -52,7 +52,8 @@ class BusinessDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
 
 
 
-class PostListView(CreateView):
+class PostListView(ListView):
     model = Post
     template_name = 'estate/post_list.html'
+    context_object_name = 'posts'
     
