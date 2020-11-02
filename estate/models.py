@@ -17,7 +17,9 @@ class Business(models.Model):
     business_location = models.ForeignKey(Neighborhood,on_delete=models.CASCADE,null=True)
 
 
-
+    def search_by_name(cls,search_term):
+       businesses = cls.objects.filter(business_name__icontains=search_term)
+       return businesses
 
     def __str__(self):
         return self.business_name
