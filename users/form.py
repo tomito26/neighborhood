@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.forms import fields
 from .models import Profile
+from estate.models import Neighborhood
 
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
@@ -23,3 +24,8 @@ class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['image','bio']
+        
+class NeighborhoodUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Neighborhood
+        fields = ['neighborhood_name','location']

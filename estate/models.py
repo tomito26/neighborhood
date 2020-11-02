@@ -5,7 +5,7 @@ from django.urls import reverse
 
 
 class Neighborhood(models.Model):
-    neigborhood_name = models.CharField(max_length=100)
+    neighborhood_name = models.CharField(max_length=100)
     location = models.CharField(max_length=100, null=True)
 
 
