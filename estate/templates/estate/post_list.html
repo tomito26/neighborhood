@@ -1,8 +1,8 @@
 {% extends 'estate/base.html' %}
 
 {% block content %}
-<div class="container">
-    
+<div class="container pb-5 mb-5 pt-5">
+    <a href="{% url 'post-create' %}" class="btn btn-info btn-sm">Create-Post</a>
     {% for post in posts%}
         <div class="row p-5">
             <div class="col-md-3"></div>
