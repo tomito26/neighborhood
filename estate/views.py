@@ -1,3 +1,4 @@
+from django.http import request
 from django.shortcuts import render
 from .models import Business, Post
 from django.views.generic  import ListView,DetailView,CreateView,UpdateView,DeleteView
@@ -96,3 +97,17 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         if self.request.user == post.author:
             return True
         return False
+    
+
+def search_results(request):
+    if 'business' in request.GET and  request.GET['article']:
+        search_term = request.GET.get('business')
+        searched_businesses = Business.search_by_name(search_term)
+        
+        message = f"{search_term}"
+        
+        return render(request,'estate/search.html',{"message":message, 'business':searched_businesses})
+    else:
+        message = "You haven't search for any term"
+        return render(request,'estate/search.html',{'message':message})
+    
