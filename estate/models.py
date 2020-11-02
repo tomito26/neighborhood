@@ -32,6 +32,7 @@ class Post(models.Model):
     date_posted =models.DateTimeField(auto_now=True)
     neighborhood = models.ForeignKey(Neighborhood,on_delete=models.CASCADE,null=True,blank=True)
     
-    
-   
-  
+      
+    def get_absolute_url(self):
+      return reverse('posts')
+
