@@ -52,8 +52,15 @@ class BusinessDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
 
 
 
-class PostListView(ListView):
+class PostListView(LoginRequiredMixin,ListView):
     model = Post
     template_name = 'estate/post_list.html'
     context_object_name = 'posts'
-    
+
+class PostCreateView(CreateView):
+    model = Post
+    fields =  ['post']
+    success_url = 'posts'
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
