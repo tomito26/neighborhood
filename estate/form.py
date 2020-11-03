@@ -6,7 +6,7 @@ class BusinessForms(forms.ModelForm):
     email = forms.EmailField()
     class Meta:
         model =  Business
-        fields = ['business_name','email','business_image']
+        fields = ['name','email','business_image','location']
 
 
 class PostForms(forms.ModelForm):

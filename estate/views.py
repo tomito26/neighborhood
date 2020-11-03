@@ -16,7 +16,7 @@ class BusinessDetailView(LoginRequiredMixin,DetailView):
 
 class BusinessCreateView(LoginRequiredMixin,CreateView):
     model = Business
-    fields = ['business_name','email','business_image']
+    fields = ['name','email','business_image','location']
 
     def form_valid(self, form):
         form.instance.business_owner = self.request.user
@@ -25,7 +25,7 @@ class BusinessCreateView(LoginRequiredMixin,CreateView):
 
 class BusinessUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
     model = Business
-    fields = ['business_name', 'email', 'business_image']
+    fields = ['name', 'email', 'business_image','location']
 
     def form_valid(self, form):
         form.instance.business_owner = self.request.user

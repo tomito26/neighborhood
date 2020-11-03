@@ -22,10 +22,47 @@
               <img src="{{business.business_image.url}}" alt="" class="img-fluid">
               <div class="card-body">
                 <a href="{% url 'business-detail' business.pk %}"><p class="card-text">{{business.name}}</p></a>
+                <p class="card-text">{{business.location}}</p>
               </div>
             </div>
           </div>
       {% endfor %}
+    </div>
+    <div class="div">
+      <h3 class="pt-5 mt-5 text-center">Emergency Response Calls</h3>
+      <p>Incase of emergencies these are the helplines </p>
+    </div>
+    <div class="row pt-3">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://unsplash.com/photos/IFMhRKSxZB8/download?force=true&w=640" class="img-fluid card-img-top" alt="ambulance" style="height: 300px;">
+          <div class="card-body">
+            <p>Police</p>
+            <p class="card-text">02012368343</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://unsplash.com/photos/LF51dxC0AoU/download?force=true&w=640" class="img-fluid card-img-top"
+            alt="police" style="height: 300px;">
+          <div class="card-body">
+            <p>FireFighters</p>
+            <p class="card-text">02074968343</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://unsplash.com/photos/wOiCLxyavTo/download?force=true&w=640" class="img-fluid card-img-top"
+            alt="police" style="height: 300px;">
+          <div class="card-body">
+            <p>Ambulance</p>
+            <p class="card-text">02074668343</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

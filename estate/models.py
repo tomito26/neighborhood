@@ -15,6 +15,7 @@ class Business(models.Model):
     email = models.EmailField()
     business_image = CloudinaryField(null=True)
     business_location = models.ForeignKey(Neighborhood,on_delete=models.CASCADE,null=True)
+    location = models.CharField(max_length=100,null=True,blank=True)
 
     @classmethod
     def search_by_title(cls,search_term):
