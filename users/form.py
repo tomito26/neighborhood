@@ -25,7 +25,7 @@ class ProfileUpdateForm(forms.ModelForm):
         model = Profile
         fields = ['image','bio']
         
-class NeighborhoodUpdateForm(forms.ModelForm):
-    class Meta:
-        model = Neighborhood
-        fields = ['neighborhood_name','location']
+# class NeighborhoodUpdateForm(forms.ModelForm):
+#     class Meta:
+#         model = Neighborhood
+#         fields = ['neighborhood_name','location']

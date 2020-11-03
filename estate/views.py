@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.http import request
 from django.shortcuts import render
 from .models import Business, Post
@@ -98,7 +99,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
             return True
         return False
     
-
+@login_required
 def search_results(request):
 
     if 'query' in request.GET  and request.GET['query']:
