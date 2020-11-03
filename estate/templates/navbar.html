@@ -7,8 +7,8 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item pr-5 mt-3">
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="business">
+                <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search_results' %}">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search Businesses" aria-label="Search" name="query">
                     <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </li>

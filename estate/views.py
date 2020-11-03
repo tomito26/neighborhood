@@ -100,14 +100,20 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     
 
 def search_results(request):
-    if 'business' in request.GET and  request.GET['article']:
-        search_term = request.GET.get('business')
-        searched_businesses = Business.search_by_name(search_term)
+
+    if 'query' in request.GET  and request.GET['query']:
+        search_term = request.GET.get('query')
+        searched_businesses = Business.search_by_title(search_term)
         
         message = f"{search_term}"
+        context ={
+            'message':message,
+            'businesses':searched_businesses
+        }
         
-        return render(request,'estate/search.html',{"message":message, 'business':searched_businesses})
+        return render(request,'estate/search.html',context)
+
     else:
-        message = "You haven't search for any term"
+        message = "You haven't searched for any term"
         return render(request,'estate/search.html',{'message':message})
-    
+        

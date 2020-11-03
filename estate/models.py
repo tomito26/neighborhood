@@ -10,15 +10,15 @@ class Neighborhood(models.Model):
 
 
 class Business(models.Model):
-    business_name =  models.CharField(max_length=100)
+    name =  models.CharField(max_length=100)
     business_owner = models.ForeignKey(User,on_delete=models.CASCADE, null=True)
     email = models.EmailField()
     business_image = CloudinaryField(null=True)
     business_location = models.ForeignKey(Neighborhood,on_delete=models.CASCADE,null=True)
 
-
-    def search_by_name(cls,search_term):
-       businesses = cls.objects.filter(business_name__icontains=search_term)
+    @classmethod
+    def search_by_title(cls,search_term):
+       businesses = cls.objects.filter(name__icontains=search_term)
        return businesses
 
     def __str__(self):
