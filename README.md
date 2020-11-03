@@ -1,6 +1,6 @@
 
-# Awwwards App
-This  project is a [Awwwards](https://awwwards26.herokuapp.com/) clone website where users can  post their websites and it gets rated by other users,they also can rate other users' websites
+# Neighborhood Watch
+This  project is a [Neighborhood](https://neigborhoodwatch.herokuapp.com/) app where users  can get updates  about their neighborhood the businesses around and also interact with one another on the same platform
 
 Here is the landing page
 ![landing page](landingpage.png)
