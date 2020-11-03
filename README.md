@@ -6,11 +6,16 @@ Here is the landing page
 ![landing page](landingpage.png)
 
 These are the posts by the users
-![websites](websites.png)
+![websites](businesses.png)
 
-THis is the page where the user update profile photos and bio
+The neighborhood forum
+![forum](forum.png)
 
-![Update profile](updateprofile.png)
+Emergency response helplines
+![emergency response](Screenshot%20from%202020-11-03%2014-07-04.png)
+This is the page where the user update profile photos and bio
+
+![Update profile](profile.png)
  
 ## Author
 * Thomas Khaemba 
